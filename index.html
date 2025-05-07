@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Gastos - UENO BANK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Gastos</h1>
+        
+        <div class="controls">
+            <button onclick="agregarFila()">➕ Agregar Fila</button>
+            <button onclick="guardarDatos()">💾 Guardar Datos</button>
+            <button onclick="exportarCSV()">📤 Exportar a Excel</button>
+        </div>
+
+        <div class="table-container">
+            <table id="gastosTable">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Monto</th>
+                        <th>Local</th>
+                        <th>Reintegro</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Filas se agregarán dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="vistaPrevia">
+            <h2>Vista Previa de Gastos</h2>
+            <div id="previewContent">
+                <p>No hay gastos registrados todavía.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
